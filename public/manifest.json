@@ -1,6 +1,6 @@
 {
- "name": "Countdown App",
-  "short_name": "Countdown",
+ "name": "Pub Quiz App",
+  "short_name": "Pub Quiz",
    "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
