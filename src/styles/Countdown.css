@@ -1,0 +1,243 @@
+.countdown-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.countdown-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-input {
+  padding: 8px;
+  width: 80px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.countdown-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.countdown-input-minutes {
+  margin-right: 5px;
+}
+
+.countdown-input-seconds {
+  margin-left: 5px;
+}
+
+.countdown-button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.countdown-button:hover {
+  background-color: #2563eb;
+}
+
+.countdown-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.countdown-reset {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.countdown-reset:hover {
+  background-color: #e0e0e0;
+}
+
+.countdown-display {
+  font-size: 256px;
+  margin: 20px;
+  font-family: system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .countdown-display {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-display {
+    font-size: 100px;
+  }
+  
+  .countdown-input {
+    width: 60px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .countdown-container h1 {
+    color: #f0f0f0;
+  }
+  
+  .countdown-input {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+  
+  .countdown-reset {
+    background-color: #333;
+    color: #e0e0e0;
+  }
+  
+  .countdown-reset:hover {
+    background-color: #444;
+  }
+  
+  .countdown-display {
+    color: #f0f0f0;
+  }
+}
+
+.countdown-options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  transition: background-color 0.2s;
+}
+
+.countdown-option:hover {
+  background-color: #e0e0e0;
+}
+
+.countdown-option input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.option-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .countdown-option {
+    background-color: #333;
+  }
+  
+  .countdown-option:hover {
+    background-color: #444;
+  }
+  
+  .option-text {
+    color: #e0e0e0;
+  }
+}
+
+.countdown-progress-container {
+  width: 80%;
+  max-width: 500px;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 5px;
+  transition: width 1s linear;
+}
+
+@media (prefers-color-scheme: dark) {
+  .countdown-progress-container {
+    background-color: #444;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown-finished {
+  animation: pulse 1s infinite;
+  font-size: 200px;
+  color: #3659f4;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .countdown-finished {
+    font-size: 200px;
+    color: #f4367f;
+  }
+}
+@media (max-width: 1280px) {
+  .countdown-finished {
+    font-size: 50px;
+        color: #f4367f;
+  }
+}
+
+/* Stop Alarm Button */
+.countdown-button.stop-alarm {
+  margin-top: 15px;
+  background-color: #e53935;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+.countdown-button.stop-alarm:hover {
+  background-color: #d32f2f;
+}
+
+@media (prefers-color-scheme: dark) {
+  .countdown-button.stop-alarm {
+    background-color: #f44336;
+  }
+  
+  .countdown-button.stop-alarm:hover {
+    background-color: #e53935;
+  }
+}
