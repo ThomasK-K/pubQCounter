@@ -1,8 +1,6 @@
 .countdown-container {
   text-align: center;
   margin-top: 10px;
-
-
 }
 
 .countdown-inputs {
@@ -94,18 +92,18 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .countdown-container h1 {
-    color: #f0f0f0;
+    color: #fff;
   }
   
   .countdown-input {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
+    background-color: #333;
+    color: #fff;
     border-color: #444;
   }
   
   .countdown-reset {
     background-color: #333;
-    color: #e0e0e0;
+    color: #fff;
   }
   
   .countdown-reset:hover {
